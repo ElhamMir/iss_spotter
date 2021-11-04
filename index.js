@@ -1,22 +1,13 @@
-/**
- * Makes a single API request to retrieve the user's IP address.
- * Input:
- *   - A callback (to pass back an error or the IP string)
- * Returns (via Callback):
- *   - An error, if any (nullable)
- *   - The IP address as a string (null if error). Example: "162.245.144.188"
- */
-
 // index.js
 
 // The code below is temporary and can be commented out.
-const { fetchMyIP } = require('./iss');
+const { fetchCoordsByIP } = require('./iss');
 
-fetchMyIP((error, ip) => {
+fetchCoordsByIP('162.245.144.188', (error, coordinates) => {
   if (error) {
     console.log("It didn't work!" , error);
     return;
   }
 
-  console.log('It worked! Returned IP:' , ip);
+  console.log('It worked! Returned coordinates:' , coordinates);
 });
