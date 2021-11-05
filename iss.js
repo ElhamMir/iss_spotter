@@ -142,5 +142,5 @@ const nextISSTimesForMyLocation = function(callback) {
   // empty for now
 };
 // Don't need to export the other function since we are not testing it right now.
-module.exports = { nextISSTimesForMyLocation };
+module.exports = { nextISSTimesForMyLocation , fetchMyIP};
   
